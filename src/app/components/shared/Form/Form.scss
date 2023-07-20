@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.Form.simple {
+   margin-top: 40px;
+   width: 100%;
+   min-width: 290px;
+   max-width: 410px;
+   padding: 10px 16px;
+   background-color: lighten($color-bg, 10);
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+
+   label {
+      margin-left: 2px;
+      font-size: 0.8rem;
+      color: #ffffffb4;
+   }
+
+   input {
+      width: auto;
+      min-width: 200px;
+      height: 25px;
+      padding: 0px 8px;
+      font-family: $font-default;
+      border-radius: 10px;
+      border: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: #fffffff4;
+      transition: all 0.3s;
+
+      &:hover {
+         border-radius: 10px;
+         box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.681);
+         transform: scale(102%);
+         border: none;
+      }
+
+      &:focus {
+         outline: none;
+         transform: scale(102%);
+         border: 1px solid $color-02;
+         border-radius: 10px;
+         box-shadow: 0px 0px 10px darken($color-04, $amount: 10);
+      }
+
+      &:active {
+         transform: scale(97%);
+         transition: all 0.4s;
+      }
+
+      &:empty {
+         margin-top: 4px;
+         border: 1px solid rgba(0, 0, 0, 0.373);
+         border-radius: 5px;
+      }
+   }
+
+   button {
+      @extend .btn;
+
+      font-size: 0.8rem;
+      border-radius: 5px;
+      background-color: $color-04;
+      color: white;
+
+      &:hover {
+         background-color: darken($color-04, 5);
+      }
+   }
+
+   @media (max-width: 450px) {
+      & {
+         width: 100%;
+         min-width: 250px;
+         max-width: 300px;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 15px;
+
+         label,
+         input {
+            display: block;
+         }
+      }
+   }
+}
+
+.complete-form {
+   width: auto;
+   max-width: 400px;
+   padding: 30px;
+   border-radius: 5px;
+   background-color: lighten($color-bg, 8);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 20px;
+
+   h3 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.1rem;
+   }
+
+   .Form.complete {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+
+      .input-field {
+         width: 100%;
+         padding: 7px 10px;
+         border-radius: 5px;
+         background-color: white;
+         color: black;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+
+         label {
+            font-size: 0.8rem;
+            color: rgba(black, 0.9);
+         }
+
+         input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-family: $font-default;
+            transition: all 0.4s;
+
+            &:active {
+               outline: none;
+               transform: scale(95%);
+            }
+
+            &:focus {
+               outline: none;
+               box-shadow: 0 0 10px $color-01;
+            }
+         }
+
+         select {
+            width: 100%;
+            padding: 2px 5px;
+            border: none;
+            border-radius: 10px;
+            font-family: $font-default;
+            text-transform: capitalize;
+
+            option {
+               text-transform: capitalize;
+            }
+
+            &:focus {
+               outline: none;
+               border: none;
+               box-shadow: 0 0 10px $color-01;
+            }
+         }
+      }
+
+      button {
+         @extend .btn;
+
+         width: 100%;
+         border-radius: 5px;
+         background-color: $color-04;
+         color: white;
+         // text-transform: uppercase;
+
+         &:hover {
+            background-color: darken($color-04, 10);
+         }
+      }
+   }
+
+   p:last-child {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      text-align: center;
+
+      a {
+         @extend .emphasis;
+         cursor: pointer;
+         transition: all .4s;
+
+         &:hover {
+            color: lighten($color-01, 10);
+         }
+      }
+   }
+}

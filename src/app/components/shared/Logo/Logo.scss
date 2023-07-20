@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.Logo {
+   width: auto;
+   font-family: $color-font-logo;
+   cursor: default;
+   user-select: none;
+}

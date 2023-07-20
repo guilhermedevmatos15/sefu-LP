@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.card_complete {
+   width: 300px;
+   padding: 30px 20px;
+   background-color: lighten($color-bg, 6);
+   border-radius: 5px;
+   text-align: center;
+   user-select: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   cursor: default;
+   transition: all 0.4s;
+
+   &:hover {
+      // transform: scale(102%);
+      transform: translateY(-6px);
+      background-color: lighten($color-bg, 12);
+   }
+
+   .card-icon {
+      color: $color-01;
+      font-size: 2rem;
+   }
+
+   .card-category {
+      text-transform: capitalize;
+      font-size: 0.85rem;
+      color: #ffffff6e;
+      font-weight: 300;
+   }
+
+   .card-description {
+      font-size: 1.3rem;
+      font-weight: 600;
+   }
+
+   .card-more-details,
+   .card-more-details a {
+      margin-top: 16px;
+      color: lighten($color-01, 5);
+      font-weight: 300;
+      text-decoration: underline;
+      font-size: 0.9rem;
+      transition: all 0.4s;
+
+      &:hover {
+         color: darken($color-01, 5);
+      }
+   }
+}
+
+.card_simple {
+   width: auto; min-width: 300px; max-width: 500px;
+   padding: 20px 25px;
+   background-color: lighten($color-bg, $amount: 10);
+   border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 25px;
+   cursor: default;
+   user-select: none;
+   transition: all .4s;
+
+   .card-icon {
+      font-size: 1.8rem;
+      color: lighten($color-04, 8);
+   }
+
+   .card-content {
+
+      .card-category {
+         font-size: 0.8rem;
+         color: rgba(white, 0.4);
+         text-transform: capitalize;
+      }
+      
+      .card-description {
+         width: auto; max-width: 280px;
+         margin-top: 5px;
+         font-size: 1.05rem;
+         line-height: 1.6rem;
+         font-weight: 500;
+      }
+   }
+
+
+   &:hover {
+      transform: scale(102%);
+      background-color: lighten($color-bg, 12);
+   }
+}

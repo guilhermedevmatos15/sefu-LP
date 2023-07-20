@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.ButtonStore {
+   min-width: 160px;
+   padding: 8px 12px;
+   background-color: darken($color-bg, 1);
+   color: white;
+   font-family: $font-default;
+   border: none;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   user-select: none;
+   cursor: pointer;
+   transition: all 0.4s;
+
+   &:hover {
+      background-color: lighten(darken($color-bg, 1), 7.5);
+      transform: translateY(-2px);
+   }
+
+   .btn-icon {
+      font-size: 1.5rem;
+      color: $color-01;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .btn-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      p {
+         color: rgba(255, 255, 255, 0.61);
+         font-size: 0.75rem;
+         font-weight: 200;
+         line-height: 1rem;
+      }
+
+      h3 {
+         font-weight: 400;
+         font-size: 1rem;
+         line-height: 1.4rem;
+      }
+   }
+}

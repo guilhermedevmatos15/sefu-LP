@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './test/reportWebVitals';
 
-import App from './App';
+// Styles
+import './app/styles/index.scss';
+
+// Router
+import Routes from './Routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Routes />
   </React.StrictMode>
 );
 

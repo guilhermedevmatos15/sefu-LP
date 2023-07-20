@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.Navigation {
+   width: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li, a {
+         color: white;
+         text-decoration: none;
+         cursor: pointer;
+         transition: all .4s;
+
+         &:hover {
+            color: $color-04;
+         }
+      }
+   }
+}
