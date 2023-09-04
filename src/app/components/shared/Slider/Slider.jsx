@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Slide from 'slider-moon';
 import 'slider-moon/dist/style.css';
 
@@ -14,9 +15,10 @@ import './Slider.scss';
 
 // * img
 
+
 // * icons
 
-const Slider = ({ items }) => {
+const Slider = ({ items, children }) => {
    return (
       <div className="Slider">
          <Slide
@@ -28,11 +30,7 @@ const Slider = ({ items }) => {
          >
             <div className="slider my-slider">
                <ul className="slider-wrapper">
-                  {items.map((item, index) => (
-                     <li key={`item_${index}`}>
-                        
-                     </li>
-                  ))}
+                  {children}
                </ul>
             </div>
          </Slide>

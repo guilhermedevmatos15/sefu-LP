@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.Scta {
+   margin-top: 160px;
+   width: 100%; max-width: 1600px;
+   padding: 0 40px;
+
+   .cta-container {
+      width: 100%; max-width: 1000px;
+      margin: auto;
+      padding: 45px 30px;
+      border-radius: 15px;
+      background-color: lighten($color-bg, 10);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+
+      h2 {
+         @include caption(480px, 1.8rem, center);
+      }
+
+      p {
+         color: rgba(white, 0.8);
+         font-size: 0.95rem;
+         text-align: center;
+      }
+
+      button {
+         @extend .btn;
+
+         background-color: $color-04;
+         color: white;
+         font-weight: 400;
+         border-radius: 5px;
+      }
+
+      @media (max-width: 400px) {
+         & {
+            gap: 30px;
+         }
+      }
+   }
+
+   @media (max-width: 650px) {
+      & {
+         padding: 0;
+      }
+   }
+
+}

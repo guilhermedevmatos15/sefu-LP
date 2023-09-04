@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.SHero {
+   margin: 0 auto 0 auto;
+   width: auto;
+   max-width: 1650px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+
+   .content {
+      width: 50%;
+      padding-left: 15%;
+      // padding-left: 250px;
+
+      h1 {
+         max-width: 400px;
+         font-size: 3.6rem;
+         font-weight: 600;
+         line-height: 3.8rem;
+
+         span {
+            @extend .emphasis;
+         }
+      }
+
+      p {
+         max-width: 400px;
+         margin-top: 30px;
+         color: rgba(darken(white, $amount: 20), 0.68);
+         font-size: 1rem;
+      }
+   }
+
+   .image {
+      width: 50%;
+      padding-left: 70px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      filter: drop-shadow(0 0 100px rgba($color-03, 0.4));
+
+      img {
+         width: 100%;
+         min-width: 450px;
+         max-width: 550px;
+      }
+   }
+
+   @media (max-width: 1200px) {
+      & {
+         margin: 75px auto 0 auto;
+         flex-direction: column;
+         gap: 50px;
+      }
+
+      .content,
+      .image {
+         width: 100%;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+
+         img {
+            width: 90%;
+            min-width: 300px;
+            max-width: 400px;
+         }
+      }
+   }
+}

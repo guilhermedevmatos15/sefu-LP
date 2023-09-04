@@ -15,7 +15,7 @@ import './Navigation.scss';
 
 // * icons
 
-const Navigation = ({ direction, gap, colorText, fontSize }) => {
+const Navigation = ({ direction, gap, colorText, fontSize, setOpenMenu }) => {
 
    const style_ul = {
       flexDirection: direction ? direction : 'row',
@@ -30,9 +30,10 @@ const Navigation = ({ direction, gap, colorText, fontSize }) => {
    return (
       <nav className="Navigation">
          <ul style={style_ul}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
+            <li style={style_link} onClick={e => {setOpenMenu(false)}}><a href="#s_provider" style={style_link}>Provider</a></li>
+            <li style={style_link} onClick={e => {setOpenMenu(false)}}><a href="#s_solutions" style={style_link}>Solutions</a></li>
+            <li style={style_link} onClick={e => {setOpenMenu(false)}}><a href="#s_plan" style={style_link}>Plan</a></li>
+            <li style={style_link} onClick={e => {setOpenMenu(false)}}><a href="#s_client" style={style_link}>Client's</a></li>
          </ul>
       </nav>
    );

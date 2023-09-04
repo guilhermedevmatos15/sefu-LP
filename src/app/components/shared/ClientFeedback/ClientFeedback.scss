@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.ClientFeedback {
+   width: 100%; min-width: 300px; max-width: 500px;
+   padding: 25px 30px;
+   border-radius: 10px;
+   background-color: lighten($color-bg, 8);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+   user-select: none;
+
+   img {
+      width: 160px;
+      border-radius: 15px;
+   }
+
+   .content {
+
+      .watch-video {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         gap: 10px;
+         cursor: pointer;
+         transition: all .4s;
+         
+         .watch-video-icon {
+            transition: all .4s;
+            font-size: 1.8rem;
+            color: $color-01;
+         }
+
+         p {
+            width: 100px;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            text-transform: capitalize;
+
+            &::first-line {
+               font-size: 0.75rem;
+            }
+         }
+      }
+
+      h3 {
+         margin-top: 15px;
+         font-size: 1.4rem;
+         line-height: 2rem;
+         font-weight: 600;
+      }
+
+      .description {
+         margin-top: 20px;
+         color: rgba(255, 255, 255, 0.7);
+         font-size: 0.9rem;
+         font-weight: 300;
+      }
+      
+      .client-info {
+         color: rgba($color-03, 0.9);
+         margin-top: 20px;
+         font-size: 0.85rem;
+      }
+   }
+
+
+   @media all and (max-width: 570px) {
+      & {
+         width: auto; min-width: 250px; max-width: 400px;
+         padding: 25px 10px;
+         flex-direction: column;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         gap: 25px;
+         
+         img {
+            width: 180px;
+         }
+
+         .content {
+            .watch-video {
+               margin: auto;
+               justify-content: center;
+               align-items: center;
+               text-align: left;
+            }
+         }
+      }
+   }
+
+   @media (max-width: 480px) {
+      & {
+         max-width: 300px;
+         padding: 25px 20px;
+      }
+   }
+}

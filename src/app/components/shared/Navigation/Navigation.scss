@@ -15,7 +15,18 @@
       justify-content: center;
       align-items: center;
 
-      li, a {
+      li {
+         color: white;
+         text-decoration: none;
+         cursor: pointer;
+         transition: all .4s;
+
+         &:hover {
+            color: $color-04;
+         }
+      }
+
+      a {
          color: white;
          text-decoration: none;
          cursor: pointer;

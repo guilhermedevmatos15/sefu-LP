@@ -27,7 +27,7 @@ const Form = ({ type }) => {
                <div className="input-group">
                   <label>
                      <span>Email address.</span>
-                     <input type="email" required autoComplete="off" />
+                     <input type="email" isrequired="true" autoComplete="off" />
                   </label>
                </div>
                <button type="submit">Get a quote</button>

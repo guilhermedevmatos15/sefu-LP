@@ -28,9 +28,7 @@
 @mixin caption($max-width, $font-size, $text-align) {
    max-width: $max-width;
    font-size: $font-size;
-   line-height: calc(
-      #{$font-size} + 0.6rem
-   );
+   line-height: calc(#{$font-size} + 0.6rem);
    text-align: $text-align;
    font-weight: 600;
 

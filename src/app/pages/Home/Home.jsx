@@ -1,17 +1,20 @@
 /* eslint-disable react/jsx-pascal-case */
-import React from 'react';
+import React, { useState } from 'react';
 
 // * components
 import Header from '../../components/shared/Header/Header';
 import Container from '../../components/shared/Container/Container';
-import S_Hero from '../../components/section/S_Hero/S_Hero';
-import S_Stats from '../../components/section/S_Stats/S_Stats';
-import S_Cards from '../../components/section/S_Cards/S_Cards';
-import S_Provider from '../../components/section/S_Provider/S_Provider';
-import S_Solutions from '../../components/section/S_Solutions/S_Solutions';
-import S_Download from '../../components/section/S_Download/S_Download';
-import S_Plan from '../../components/section/S_Plan/S_Plan';
-import S_About from '../../components/section/S_About/S_About';
+import SHero from '../../components/section/SHero/SHero';
+import SStats from '../../components/section/SStats/SStats';
+import SCards from '../../components/section/SCards/SCards';
+import SProvider from '../../components/section/SProvider/SProvider';
+import SSolutions from '../../components/section/SSolutions/SSolutions';
+import SDownload from '../../components/section/SDownload/SDownload';
+import SPlan from '../../components/section/SPlan/SPlan';
+import SAbout from '../../components/section/SAbout/SAbout';
+import SNews from '../../components/section/SNews/SNews';
+import Scta from '../../components/section/Scta/Scta';
+import Footer from '../../components/shared/Footer/Footer';
 
 // * style
 import './Home.scss';
@@ -25,21 +28,27 @@ import './Home.scss';
 // * icons
 
 const Home = () => {
+   const [openMenu, setOpenMenu] = useState(false);
+
    return (
       <div className="Home">
-         <Header />
+         <Header openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
          <Container>
-            <S_Hero />
-            <S_Stats type='loveUs' />
-            <S_Cards type='complete' />
-            <S_Provider />
-            <S_Stats type='data' />
-            <S_Solutions />
-            <S_Download />
-            <S_Plan />
-            <S_About />
+            <SHero />
+            <SStats type="loveUs" />
+            <SCards type="complete" />
+            <SProvider />
+            <SStats type="data" />
+            <SSolutions />
+            <SDownload />
+            <SPlan />
+            <SAbout />
+            <SNews />
+            <Scta />
          </Container>
+
+         <Footer />
       </div>
    );
 };

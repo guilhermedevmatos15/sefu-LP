@@ -26,4 +26,27 @@
          background-color: darken($color-01, 20);
       }
    }
+
+   .icon-menu {
+      display: none;
+   }
+
+   @media (max-width: 810px) {
+      & {
+         > .Navigation, > button {
+            display: none;
+         }
+
+         .icon-menu {
+            display: inline;
+            font-size: 2rem;
+            transition: all .4s;
+            cursor: pointer;
+
+            &:hover {
+               color: $color-01;
+            }
+         }
+      }
+   }
 }

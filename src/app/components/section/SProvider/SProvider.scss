@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.SProvider {
+   margin: 150px auto 0 auto;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 150px;
+
+   .image {
+      width: 50%;
+      padding-right: 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      filter: drop-shadow(0 0 120px rgba($color-04, 0.4));
+
+      img {
+         width: 50%; min-width: 440px; max-width: 500px;
+      }
+   }
+
+   .content {
+      width: 50%;
+
+      h2 {
+         @include caption(400px, 2.5rem, left);
+      }
+
+      p {
+         max-width: 430px;
+         margin-top: 25px;
+         color: rgba(darken(white, $amount: 20), 0.6);
+         font-size: 0.9rem;
+      }
+
+      button {
+         @extend .btn;
+         
+         margin-top: 25px;
+         background-color: $color-04;
+         color: white;
+   
+         &:hover {
+            background-color: darken($color-04, 20);
+         }
+      }
+   }
+
+
+   @media (max-width: 1180px) {
+      & {
+         gap: 50px;
+      }
+   }
+
+   @media (max-width: 1024px) {
+      .image {
+         display: none;
+      }
+
+      .content {
+         width: 100%;
+         margin: auto;
+         padding: 0;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         h2 {
+            text-align: center;
+         }
+      }
+   }
+}

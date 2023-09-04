@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@import '../../../styles/variables.scss';
+@import '../../../styles/styles.scss';
+
+.SCards {
+   width: 100%;
+}
+
+.cards_complete {
+   margin: 60px auto 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   flex-wrap: wrap;
+}
+
+.cards_simple {
+   // margin: 60px auto 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
